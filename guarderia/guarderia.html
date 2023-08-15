@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Gestión de Infantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #formulario {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+<img src="assets/img/guarderia.jpeg" withd="10px" heigth="10px" >
+        <h1>Formulario de Gestión de Infantes</h1>
+        <div id="formulario">
+            <form action="/guarderia" method="post">
+                <label for="nombre">Nombre del Infante:</label>
+                <input type="text" id="nombre" name="nombre" 
+required>
+	<label for="hora">Hora:</label>
+		<input type="time" id="hora" name="Hora" required>
+		<br>
+	<label for="fecha">Fecha:</label>
+		<input type="date" id="fecha" name="Fecha" required>
+		<br>
+
+                <label for="edad">Edad del Infante:</label>
+                <select id="edad" name="edad" required>
+                    <option value="0-1">0 - 1 año</option>
+                    <option value="1-2">1 - 2 años</option>
+                    <option value="2-3">2 - 3 años</option>
+                    <option value="3-4">3 - 4 años</option>
+                </select>
+
+                <label for="padres">Nombre de los Padres:</label>
+                <input type="text" id="padres" name="padres" required>
+
+                <label for="contacto">Información de Contacto:</label>
+                <textarea id="contacto" name="contacto" rows="4" required></textarea>
+
+                <input type="submit" value="Registrar Infante">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
